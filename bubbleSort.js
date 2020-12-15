@@ -20,6 +20,7 @@ const add_bubble = () => {
 
     const unsortedHeading = document.createElement('h2')
     unsortedHeading.innerText =  "unsorted array"
+    unsortedHeading.className = "heading"
     detail.appendChild(unsortedHeading)
     
     const unsortedBox = document.createElement('div')
@@ -57,6 +58,9 @@ for(num of array) {
     sorted.innerText = num 
     sortedArr.appendChild(sorted)
                 }
+    let heading = document.querySelector('.heading')
+    heading.innerText = ""
+    heading.innerText = 'Sorted'
 
 
 }
