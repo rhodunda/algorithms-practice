@@ -14,6 +14,37 @@ const bubbleSort = (array) => {
     }
     return array
 }
-console.log('[bubble sort.js] bubble sort')
-console.log(bubbleSort(unsortedArray))
-console.log('---------------')
+
+const add_bubble = () => {
+    const detail = document.querySelector('.detail')
+
+   let x;
+
+   const unsortedHeading = document.createElement('h2')
+   unsortedHeading.innerText =  "unsorted array"
+   detail.appendChild(unsortedHeading)
+
+   const unsortedBox = document.createElement('div')
+   unsortedBox.className = "unsortedbox"
+   detail.appendChild(unsortedBox)
+
+   for(x of unsortedArray) {
+        let unsortedNum = document.createElement('h3')
+        unsortedNum.className = "unsortedNum"
+        unsortedNum.innerText = x
+        unsortedBox.appendChild(unsortedNum)
+   }
+       
+    
+
+    let array = bubbleSort(unsortedArray)
+    for(i = 0; i < array.length; i++) {
+            let arrayNum = document.createElement('div')
+            arrayNum.innerText = i
+
+
+    }
+}
+// console.log('[bubble sort.js] bubble sort')
+// console.log(bubbleSort(unsortedArray))
+// console.log('---------------')

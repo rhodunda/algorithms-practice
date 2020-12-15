@@ -1,5 +1,22 @@
-#welcome {
+.welcome {
     justify-content: center;
     color: blue;
+    border: blueviolet;
     align-self: center;
 }
+
+.unsortedbox {
+display: flex;
+flex-direction: row;
+border-style: solid;
+border-width: 4px;
+border-color: black;
+background-color: gray;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.unsortedNum {
+margin: auto;
+} 
+
