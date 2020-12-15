@@ -18,33 +18,56 @@ const bubbleSort = (array) => {
 const add_bubble = () => {
     const detail = document.querySelector('.detail')
 
-   let x;
+    const unsortedHeading = document.createElement('h2')
+    unsortedHeading.innerText =  "unsorted array"
+    detail.appendChild(unsortedHeading)
+    
+    const unsortedBox = document.createElement('div')
+    unsortedBox.className = "unsortedbox"
+    detail.appendChild(unsortedBox)
 
-   const unsortedHeading = document.createElement('h2')
-   unsortedHeading.innerText =  "unsorted array"
-   detail.appendChild(unsortedHeading)
-
-   const unsortedBox = document.createElement('div')
-   unsortedBox.className = "unsortedbox"
-   detail.appendChild(unsortedBox)
-
-   for(x of unsortedArray) {
-        let unsortedNum = document.createElement('h3')
+    const sortButton = document.createElement('button')
+    sortButton.className = "sortbutton"
+    sortButton.innerText = 'Sort'
+    detail.appendChild(sortButton)
+    sortButton.addEventListener('click', function() {
+        sortClickHandler(event)
+    })
+    
+    
+    let x;
+    for(x of unsortedArray) {
+        let unsortedNum = document.createElement('div')
         unsortedNum.className = "unsortedNum"
         unsortedNum.innerText = x
         unsortedBox.appendChild(unsortedNum)
    }
-       
-    
 
-    let array = bubbleSort(unsortedArray)
-    for(i = 0; i < array.length; i++) {
-            let arrayNum = document.createElement('div')
-            arrayNum.innerText = i
-
-
-    }
 }
+
+const sortClickHandler = (event) => {
+    let sortedArr = document.querySelector('.unsortedbox')
+    sortedArr.innerHTML = ''
+
+let array = bubbleSort(unsortedArray)
+
+    let sorted = document.createElement('div')
+    sorted.className = "sortedNum"
+    sorted.innerText = array
+    sortedArr.appendChild(sorted)
+
+
+}
+
+
+
+
+
+
+
+
+
+
 // console.log('[bubble sort.js] bubble sort')
 // console.log(bubbleSort(unsortedArray))
 // console.log('---------------')
