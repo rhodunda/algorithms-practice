@@ -51,10 +51,12 @@ const sortClickHandler = (event) => {
 
 let array = bubbleSort(unsortedArray)
 
+for(num of array) {
     let sorted = document.createElement('div')
     sorted.className = "sortedNum"
-    sorted.innerText = array
+    sorted.innerText = num 
     sortedArr.appendChild(sorted)
+                }
 
 
 }
