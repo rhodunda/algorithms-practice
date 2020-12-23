@@ -14,7 +14,9 @@ class Node {
 
 let node1 = new Node(2)
 let node2 = new Node(8)
+let node3 = new Node(51)
 node1.next = node2 
+node2.next = node3
 let l1 = new LinkedList(node1)
 console.log(l1)
 
