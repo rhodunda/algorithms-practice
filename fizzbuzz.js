@@ -17,12 +17,6 @@ const numbers = [4]
 // }
 // }
 
-const fizzBuzz = () => {
-   
-    for(i = 0; i > numbers.length; i++) {
-
-    }
-}
 console.log(numbers)
 
 console.log(fizzBuzz(numbers))
