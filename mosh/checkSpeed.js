@@ -1,4 +1,4 @@
-const speed = 77
+const speed = 85
 
 
 // speed limit = 70
@@ -18,7 +18,7 @@ let points = 0
             if(points >= 12) {
                 return "SUSPENDED"
 
-    }else return points
+    }else return `points ${points}`
         } return 'OK'
 }
 
