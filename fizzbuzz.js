@@ -10,9 +10,9 @@ const numbers = 15
 
 const fizzBuzz = (num) => {
     if(typeof num !== 'number') 
-        return "NAN"
+        return NaN
     
-    if(num % 3 === 0 && num % 5 === 0) 
+    if((num % 3 === 0) && (num % 5 === 0)) 
         return 'FizzBuzz'  
 
     if(num % 3 === 0) 
