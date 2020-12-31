@@ -1,22 +1,30 @@
 
-const numbers = [4]
+const numbers = 15
 
 
-// const fizzBuzz = () => {
-//     for(let i = 0; i < numbers.length; i++) {
-//         if(i % 3 === 0 && i % 5 === 0) {
-//             console.log('fizz-buzz')
-           
-//         }  else if(i%3 === 0) {
-//             console.log('fizz')
-        
-//         } else if(i%5 === 0) {
-//         console.log('buzz')
-        
-//     }
-// }
-// }
+// if the input is divisable by 3 => fizz
+// if the input is divisable by 5 => buzz
+// if the input is divisable by 3 and 5  => fizzbuzz
+// if the input is not divisable by 3 or 5 => return the input
+// if the input is NAN true undefined 
 
-console.log(numbers)
+const fizzBuzz = (num) => {
+    if(typeof num !== 'number') 
+        return "NAN"
+    
+    if(num % 3 === 0 && num % 5 === 0) 
+        return 'FizzBuzz'  
 
-console.log(fizzBuzz(numbers))
+    if(num % 3 === 0) 
+        return 'Fizz'
+
+    if (num % 5 === 0) 
+        return 'Buzz'
+    
+        return num
+
+}
+    
+
+
+console.log(`[fizzBuzz] ${fizzBuzz(numbers)}`)
