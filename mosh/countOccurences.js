@@ -1,18 +1,18 @@
-const ar = [1,4,7,-10,100,7,44,2]
+const ar = [1,4,7,-10,100,7,44,2, 4, 5, 5]
 
+// not working if there is three of the same number
 
 const count = (array) => {
 
     let numberOfCount = 0
-
-    for(let i = 0; i < array.length; i++) {
-        for(let j = 0; j < array.length; j++) {
-            if(array[i] === array[j])  {
+    const sortedArray = array.sort()
+    for(let i = 0; i < sortedArray.length; i++) {
+            if(sortedArray[i] === sortedArray[i + 1])  {
                     numberOfCount++
-                    console.log([array[i], array[j]])
+                    
             }
         
-        }
+        
     }
     return numberOfCount
 }
