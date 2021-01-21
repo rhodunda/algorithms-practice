@@ -9,10 +9,19 @@ const movies = [
 
 
 const sortMovies = (movies) => {
+    const container = []
 
-    for(let i = 0; i < movies.lenght; i++) {
-        console.log(movies[i].title)
+    for(let i = 0; i < movies.length; i++) {
+            if(movies[i].rating > 4) {
+                    container.push(movies[i])
+            }
     }
+
+    container.map( movie => {
+        movie.rating.sort()
+    })
+    console.log(container)
+
 }
 
 sortMovies(movies)
