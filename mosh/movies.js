@@ -6,7 +6,8 @@ const movies = [
     {title: 'c', year: 2018, rating: 3},
     {title: 'd', year: 2017, rating: 4.5}
 ]
-
+// take the movies object and return the movies with a rating above 4 
+// from 2018, and return them in descending order by rating
 
 const sortMovies = (movies) => {
   const result =   movies
