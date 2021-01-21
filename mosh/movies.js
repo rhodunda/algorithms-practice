@@ -9,19 +9,14 @@ const movies = [
 
 
 const sortMovies = (movies) => {
-    const container = []
+  const result =   movies
+    .filter(movie => movie.year === 2018 && movie.rating > 4)
+    .sort((a, b) => a.rating - b.rating)
+    .map(m => m.title)
 
-    for(let i = 0; i < movies.length; i++) {
-            if(movies[i].rating > 4) {
-                    container.push(movies[i])
-            }
-    }
 
-    container.map( movie => {
-        movie.rating.sort()
-    })
-    console.log(container)
-
+    console.log(result)
+    
 }
 
 sortMovies(movies)
