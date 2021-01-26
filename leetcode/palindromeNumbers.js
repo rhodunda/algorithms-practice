@@ -1,30 +1,16 @@
+const number = 123
 
 
-const number = 121
-
-// return true if the number reads the same forward as backwards
+// return true if the number is a palindrome
 // else return false
 
 const isPalindrome = (num) => {
-console.log('-----')
- let numString = JSON.stringify(num)
-let splitString = numString.split('')
-let reverseNum = splitString.reverse()
+    let reverse = num.toString().split("").reverse().join("")
 
-let isTrue = 0
-for(let i = 0; i < splitString.length; i++){
-    for(let j = 0; j < reverseNum.length; j++) {
-        if(splitString[i] !== reverseNum[j]) {
-            isTrue += 1
-            console.log('test')
-            console.log(i, j)
-            console.log('----')
-        }
-    }
-}
-if(isTrue === 0 ? console.log(true) : console.log(false) )
+    if (num.toString() === reverse) 
+        return true
 
-console.log('-----')
+    else return false
 }
 
 console.log(isPalindrome(number))
