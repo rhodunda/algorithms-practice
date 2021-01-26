@@ -28,16 +28,42 @@ const toInterger = (roman) => {
         if(romanArray[i] === "V") {
                 if(romanArray[i - 1] === "I") {
                     count += 3
-                }
-                if( romanArray[i + 1] === "I") {
-                    count += 6
-                    i++
-                }
+                }else count += 5
+
+        if(romanArray[i] === "X") {
+            if(romanArray[i - 1] === "I") {
+                count += 8
+            }else count += 10
+        }
+        if(romanArray[i] === "L") {
+            if(romanArray[i - 1] === "X") {
+                count += 30
+            }else count += 50
+    }
+        if(romanArray[i] === "C") {
+            if(romanArray[i - 1] === "X") {
+                count += 80
+            }else count += 100
+}
+        if(romanArray[i] === "D") {
+            if(romanArray[i - 1] === "C") {
+                count += 300
+            }else count += 500
+}
+        if(romanArray[i] === "D") {
+            if(romanArray[i - 1] === "C") {
+                count += 300
+            }else count += 500
+}
+        if(romanArray[i] === "D") {
+            if(romanArray[i - 1] === "C") {
+                count += 800
+            }else count += 1000
+}
+    
         }else count += 1
     }
-    return count
-    
+        return count
 }
-
 
 console.log(`[roman to interger] ${toInterger(roman)}`)
