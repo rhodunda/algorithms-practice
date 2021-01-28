@@ -21,5 +21,5 @@ const integer = 123
 const reversed = (int) => {
     if(int < 0) return -1 * reverse(-int);
     const reversedString = int.toString().split('').reverse().join('')
-    return (reverseString > 2**31 -1) ? 0 : reverseString
+    return (reversedString > 2**31 -1) ? 0 : reversedString
 }
