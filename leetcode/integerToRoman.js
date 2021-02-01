@@ -14,14 +14,22 @@
 // C can be place before a D and M to make 400 or 900
 
 
-let integer = 30
+let integer = 700
 
 
 const ToRoman = (int) => {
-// example num 44
-// XXXIV
-if(int >= 10) {
-        
+        // int = 734
+    let roman = []
+    if(int > 500) {
+        let current = int % 500 
+        // roman = 'D' = 500
+        // overFive = 234
+        roman.push('D')
+    }if(current > 100){
+        if(current > 400) {
+            
+    }
+    
 }
 }
 
