@@ -2,29 +2,22 @@
 const hayStack = 'apple'
 const needle = 'pp'
 
-// if neddle in found return 1
-// if empty return 0
+// if neddle in found return starting index
+// if  needle empty return 0
+// if they are the same return 0
 // if not found return -1
 
 const findNeedle = (hay, needle) => {
 
-    if(hay === '' || needle === '') {
-        return 0
-    }
-    const hayArray = hay.split('')
-    const needleLength = needle.length
+   if(needle === '') return 0
 
-    for(let i = 0; i < hayArray.length; i++) {
-        // looping through hay stack
-        // need to check of needle appears.
-        for(let j = 0; j < hayArray.length; j++) {
-            
-            let checkArray = hay[i] + hay[i + 1] 
-            let checkString = checkArray.join('')
-            if(checkString === needle) {
-                return 1
-                
-            }else return -1
-        }
-    }
+   if(needle === hay) return 0
+
+   for(let i = 0; i >= hay.length - needle.length; i++) {
+       // did hay.length - needle.length because its not possable after that point
+
+       if(needle === hay.substring(i, i+needle.length)) {
+           return i
+       } else return -1
+   }
 }
