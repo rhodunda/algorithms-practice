@@ -11,7 +11,20 @@ const findNeedle = (hay, needle) => {
     if(hay === '' || needle === '') {
         return 0
     }
-    for(let i = 0; i < hay.length; i++) {
-        if
+    const hayArray = hay.split('')
+    const needleLength = needle.length
+
+    for(let i = 0; i < hayArray.length; i++) {
+        // looping through hay stack
+        // need to check of needle appears.
+        for(let j = 0; j < hayArray.length; j++) {
+            
+            let checkArray = hay[i] + hay[i + 1] 
+            let checkString = checkArray.join('')
+            if(checkString === needle) {
+                return 1
+                
+            }else return -1
+        }
     }
 }
