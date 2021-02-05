@@ -29,3 +29,9 @@ set.has(5)
 //size
 set.size()
 
+/////////////////////////////////////////////////////////////////////
+
+// Map
+
+const map = new Map([['name', 'Bryan'] ['last name', 'Rhodunda']])
+
