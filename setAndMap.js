@@ -27,11 +27,34 @@ set.clear()
 set.has(5)
 
 //size
-set.size()
+set.size
 
 /////////////////////////////////////////////////////////////////////
 
-// Map
+// Map      searching my keys
 
-const map = new Map([['name', 'Bryan'] ['last name', 'Rhodunda']])
+const map = new Map([['name', 'Bryan'], ['last name', 'Rhodunda']])
 
+// map can take objects without overwriting them
+const a = {}
+const b = {}
+
+const myMap = new Map([[a, 'a'],[b, 'b']])
+console.log(myMap)
+
+
+// set
+myMap.set('c', '3')
+
+// delete
+myMap.delete('c')
+
+// clear
+myMap.clear()
+
+// has       returns true or false
+myMap.has('c')
+
+
+// size
+myMap.size
