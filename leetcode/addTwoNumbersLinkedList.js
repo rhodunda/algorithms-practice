@@ -1,7 +1,7 @@
 
 class linkedList  {
     
-    constructor(head =null) {
+    constructor(head = null) {
         this.head = head
     }
 }
@@ -38,4 +38,33 @@ const l2 = new linkedList(num1)
 
 const addTwoLinkedList = (l1, l2) => {
     
+    let num1 = 0,
+        num2 = 0,
+        carry = 0,
+        solution = new linkedList(0),
+        current = solution
+
+    while(l1 || l2) {
+        num1 = l1.data
+        num1 = l2.data
+        
+        if(num1 + num2 + carry > 10) {
+
+            current.next = new node(num1 + num2 - 10)
+            current = current.next 
+            carry + 1
+        }else{
+
+            current.next = new node(num1 + num2)
+            current = current.next
+            carry = 0
+        }
+        if(l1) l1 = l1.next
+        if(l2) l2 = l2.next
+    }
+        if(carry) current.next = new node(carry)
+        return solution.next
 }
+
+console.log(addTwoLinkedList(l1, l2))
+
