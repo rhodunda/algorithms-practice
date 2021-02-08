@@ -52,6 +52,10 @@ console.log(paper)
 
 
 
+//********************************************************************************* */
+
+
+
 
 // Queues   first in first out
 
@@ -64,6 +68,10 @@ queues.push('three')
 
 // dequeue  remove from queue
 queues.shift()
+
+
+
+
 
 // queues class based
 
