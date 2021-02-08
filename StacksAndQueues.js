@@ -1,4 +1,4 @@
-// stack
+// stack               first in last out
 
 let stack = []
 
@@ -13,7 +13,8 @@ stack.pop()
 // peek
 stack[stack.length - 1]
 
-// stack with classes
+
+// stack  class based
 
 class Stack {
     constructor() {
@@ -48,3 +49,48 @@ paper.pop('2')
 paper.peek()
 
 console.log(paper)
+
+
+
+
+// Queues   first in first out
+
+const queues = []
+
+// enqueue  add to queue
+queues.push('one')
+queues.push('two')
+queues.push('three')
+
+// dequeue  remove from queue
+queues.shift()
+
+// queues class based
+
+class Queues {
+    constructor() {
+        this.storage = {}
+        this.head = 0
+        this.tail = 0 
+    }
+
+    enqueue(element) {
+        this.storage[this.tail] = element
+        this.tail++
+    }
+
+    dequeue() {
+        let removed = this.storage[this.head]
+        delete this.storage[this.head]
+        this.head++
+        return removed
+    }
+}
+
+const playlist = new Queues()
+playlist.enqueue('RATM --- bulls on parade')
+playlist.enqueue('drake -- Gods plan')
+
+playlist.dequeue()
+
+console.log(playlist)
