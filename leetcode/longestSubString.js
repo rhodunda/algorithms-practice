@@ -1,23 +1,23 @@
 
-const subString = 'abcafkefo'
+const subString = 'aabcafkefo'
 
 
 const longestSubstring = (string) => {
     let set = new Set(),
-        count = 0,
+        count = 1,
         arrayString = string.split('')
     
     
     for(let i = 0; i < arrayString.length; i++) {
        
-            if(set.has(i))  {
-                return count
+            if(set.has(string[i]))  {
+                break
             }
             else {
-                set.add(i)
+                set.add(string[i])
                 count ++
             }
-        
+        return 
     }
     
     }
