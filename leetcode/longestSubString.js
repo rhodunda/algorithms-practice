@@ -11,13 +11,13 @@ const longestSubstring = (string) => {
     for(let i = 0; i < arrayString.length; i++) {
        
             if(set.has(string[i]))  {
-                break
+                return count
             }
             else {
                 set.add(string[i])
                 count ++
             }
-        return 
+        
     }
     
     }
